@@ -58,7 +58,7 @@ module.exports = function (router, Model, controlers = {}) {
     }
     Model.findById(req.params.id)
       .then(({ _id }) => Model.deleteOne({ _id }))
-      .then(() => res.json({ messsage: 'OK' }))
+      .then(() => res.json({ message: 'OK' }))
       .catch(() => res.status(404).json({ message: 'Not found' }));
   });
 };
